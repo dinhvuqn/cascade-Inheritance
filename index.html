@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+a{
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+/* Style the header */
+.header {
+    background-color:#ffffff;
+    padding: 20px;
+    height: 68px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.header a{
+    text-decoration: none;
+    line-height: 1;
+    font-size: 37px;
+    letter-spacing: 3px;
+    color: #555555;
+    display: block;
+    position: absolute;
+    top: 17px;
+}
+.header a .dotcom {
+	color: #4CAF50;
+}
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #5f5f5f;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a.active {
+	background-color: #4CAF50;
+}
+
+/* Change color on hover */
+.topnav a:hover:not(.active) {
+    background-color: black;
+    color: #f1f1f1;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+	float: left;
+	height: 100%;
+	overflow: auto;
+    width: 25%;
+    margin: 0;
+	padding: 0;
+	background-color: #f1f1f1;
+	display: block;
+}
+.column.side h2{
+	font-size: 21px;
+    padding-left: 16px;
+    margin: 10px 0 4px 0;
+    width: 204px;
+
+}
+.column.side a{
+    text-decoration: none;
+    display: block;
+    padding: 2px 1px 1px 16px;
+    color: inherit;
+}
+
+.column.side a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.column.side a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+/* Middle column */
+.column.middle {
+	float: left;
+    width: 75%;
+}
+.column.middle .contact input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.column.middle .contact input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.column.middle .contact input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.contact {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+/* Style the footer */
+.footer {
+    background-color:#ffffff ;
+    padding: 10px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+	<a class="w3schools-logo" href="#">w3schools<span class="dotcom">.com</span></a>
+	<div class="w3-right w3-hide-small w3-wide toptext" style="float: right;line-height: 50px;letter-spacing:4px; font-family:'Segoe UI',Arial,sans-serif">Bui Dinh Vu</div>
+</div>
+
+<div class="topnav">
+  <a href="#" class="active">Home</a>
+  <a href="#" title="CSS Tutorial">CSS</a>
+  <a href="#" title="JavaScript Tutorial">JAVASCRIPT</a>
+  <a href="#" title="SQL Tutorial">SQL</a>
+  <a href="#" title="PHP Tutorial">PHP</a>
+  <a href="#" title="Bootstrap Tutorial">BOOTSTRAP</a>
+  <a href="#" title="jQuery Tutorial">JQUERY</a>
+  <a href="#" title="Angular Tutorial">ANGULAR</a>
+  <a href="#" title="W3.CSS Tutorial">W3.CSS</a>
+  <a href="#" title="XML Tutorial">XML</a>
+</div>
+
+<div class="row">
+  <div class="column side" style="">
+  	<h2 class="left"><span class="left_h2">CSS</span> Tutorial</h2>
+	<a target="_top" class="active" href="default.asp">CSS HOME</a>
+	<a target="_top" href="css_intro.asp">CSS Introduction</a>
+	<a target="_top" href="css_syntax.asp">CSS Syntax</a>
+	<a target="_top" href="css_howto.asp">CSS How To</a>
+	<a target="_top" href="css_colors.asp">CSS Colors</a>
+	<a target="_top" href="css_background.asp">CSS Backgrounds</a>
+	<a target="_top" href="css_border.asp">CSS Borders</a>
+	<a target="_top" href="css_margin.asp">CSS Margins</a>
+	<a target="_top" href="css_padding.asp">CSS Padding</a>
+	<a target="_top" href="css_dimension.asp">CSS Height/Width</a>
+	<a target="_top" href="css_boxmodel.asp">CSS Box Model</a>
+	<a target="_top" href="css_outline.asp">CSS Outline</a>
+	<a target="_top" href="css_text.asp">CSS Text</a>
+	<a target="_top" href="css_font.asp">CSS Fonts</a>
+	<a target="_top" href="css_icons.asp">CSS Icons</a>
+	<a target="_top" href="css_link.asp">CSS Links</a>
+	<a target="_top" href="css_list.asp">CSS Lists</a>
+	<a target="_top" href="css_table.asp">CSS Tables</a>
+  </div>
+  <div class="column middle">
+    	<div class="contact">
+    		<h3>Liên hệ</h3>
+				<div>
+				  <form action="/action_page.php">
+				    <label for="fname">First Name</label>
+				    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+				    <label for="lname">Last Name</label>
+				    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+				    <label for="country">Country</label>
+				    <select id="country" name="country">
+				      <option value="australia">Australia</option>
+				      <option value="canada">Canada</option>
+				      <option value="usa">USA</option>
+				    </select>
+				  
+				    <input type="submit" value="Submit">
+				  </form>
+				</div>
+
+    	</div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+  
+</body>
+</html>
